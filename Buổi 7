@@ -1,0 +1,48 @@
+Bài 2
+
+khang@khang-VMware-Virtual-Platform:~/dev-practice$ cd backend/
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ mv README.md guide.md
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ cp config.txt config.backup.txt
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ rm config.backup.txt
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ touch error.log
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ nano backend/app.log
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ nano backend/app.log
+
+Bài 3
+
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ touch error.log
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ nano backend/app.log
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ nano backend/app.log
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ pwd
+/home/khang/dev-practice/backend
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ nano app.log
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ cat app.log
+INFO Application started
+INFO Server running on port 8080
+ERROR Database connection failed
+INFO Retry connection
+ERROR Timeout while connecting to database
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ head -n 2 app.log
+INFO Application started
+INFO Server running on port 8080
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ tail -n 2 app.log 
+INFO Retry connection
+ERROR Timeout while connecting to database
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ grep ERROR app.log
+ERROR Database connection failed
+ERROR Timeout while connecting to database
+khang@khang-VMware-Virtual-Platform:~/dev-practice/backend$ 
+
+Bài 4 
+
+khang@khang-VMware-Virtual-Platform:~/dev-practice$ find . -name "*.txt"
+./backend/config.txt
+./frontend/note.txt
+khang@khang-VMware-Virtual-Platform:~/dev-practice$ find . -name "*.log"
+./backend/error.log
+./backend/app.log
+khang@khang-VMware-Virtual-Platform:~/dev-practice$ find . -name "package.json"
+./frontend/package.json
+khang@khang-VMware-Virtual-Platform:~/dev-practice$ grep -r "port"
+backend/app.log:INFO Server running on port 8080
+khang@khang-VMware-Virtual-Platform:~/dev-practice$ 
